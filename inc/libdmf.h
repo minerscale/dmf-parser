@@ -1,10 +1,10 @@
-/*! \file dmf-parser.h
+/*! \file libdmf.h
     \brief Main library file.
 */
 
 /*! \mainpage
  * # <center>🤘 👇 Useful links 👇 🤘</center>
- * # <center>👉 dmf-parser.h 👈</center>
+ * # <center>👉 libdmf.h 👈</center>
  * # <center>👉 #dmf 👈</center>
  */
 
@@ -272,7 +272,7 @@ void display_dmf(dmf song);
 
 int verify_dmf(char *filename);
 /*! \fn int verify_dmf(char *filename);
-    \brief Verify a DMF's integrety (or for that matter dmf-parsers :/)
+    \brief Verify a DMF's integrety (or for that matter libdmf's :/)
     \param filename The path to open, verify and close.
 */
 

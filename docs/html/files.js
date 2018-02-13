@@ -1,4 +1,4 @@
 var files =
 [
-    [ "dmf-parser.h", "dmf-parser_8h.html", "dmf-parser_8h" ]
+    [ "libdmf.h", "libdmf_8h.html", "libdmf_8h" ]
 ];
