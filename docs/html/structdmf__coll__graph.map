@@ -1,0 +1,9 @@
+<map id="dmf" name="dmf">
+<area shape="rect" id="node2" href="$structnote__channel.html" title="note_channel" alt="" coords="11,184,110,211"/>
+<area shape="rect" id="node3" href="$structnote__row.html" title="note_row" alt="" coords="23,95,98,121"/>
+<area shape="rect" id="node4" href="$structnote__command.html" title="note_command" alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node5" href="$structwavetable.html" title="wavetable" alt="" coords="135,184,216,211"/>
+<area shape="rect" id="node6" href="$structsample.html" title="sample" alt="" coords="245,184,309,211"/>
+<area shape="rect" id="node7" href="$structinstrument.html" title="instrument" alt="" coords="333,184,415,211"/>
+<area shape="rect" id="node8" href="$structFM__operator.html" title="FM_operator" alt="" coords="327,95,421,121"/>
+</map>

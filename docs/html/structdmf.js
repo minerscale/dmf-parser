@@ -1,0 +1,27 @@
+var structdmf =
+[
+    [ "author", "structdmf.html#a51a049c159d72e950731c906b97f8c54", null ],
+    [ "author_length", "structdmf.html#ad581595031b95d8447e42db72a255056", null ],
+    [ "channels", "structdmf.html#ab441e507c8bb82fb063795ac8beca9a5", null ],
+    [ "custom_hz", "structdmf.html#a1e0c3c5a81d91bdca398d7ce2dd29e1a", null ],
+    [ "custom_hz_on", "structdmf.html#a82d1546b3a0ab68d4279f9390fbf6550", null ],
+    [ "highlight_A", "structdmf.html#a53c17ae13a6615edf16829b115630842", null ],
+    [ "highlight_B", "structdmf.html#a4acc721051332548b6802f62b1d2245b", null ],
+    [ "instruments", "structdmf.html#a4c92b2fd51f654ab0a81bc642aa6d23e", null ],
+    [ "name", "structdmf.html#a86afd0182f341903632612fa4c42f60e", null ],
+    [ "name_length", "structdmf.html#aeb5f7edfa100fb02bda725f80f2af887", null ],
+    [ "pattern_matrix_value", "structdmf.html#a9abb45b393a0dc932ea36ab1369dfa6b", null ],
+    [ "reigon", "structdmf.html#ae0e9a279519853b6a2a196d806c7b16a", null ],
+    [ "samples", "structdmf.html#a0690400492e3b0b5eabed0d8c3862b67", null ],
+    [ "system", "structdmf.html#a7aa63af76c01cee1f52d63e8febcdfd9", null ],
+    [ "system_total_channels", "structdmf.html#a270b460cbca2eb80a84588d0219fe641", null ],
+    [ "tick_time_1", "structdmf.html#afaf88a5c2441cf90581a0dc72f8702d1", null ],
+    [ "tick_time_2", "structdmf.html#ab221501c3b725e314bde1b789a2a853b", null ],
+    [ "time_base", "structdmf.html#a053cf9f2eb97f3b5495531274fb089de", null ],
+    [ "total_instruments", "structdmf.html#acd332982ee87977aff3c890b0fc6191c", null ],
+    [ "total_rows_in_pattern_matrix", "structdmf.html#a5d6305cbf3019d23128a8b6a1cc4f9e6", null ],
+    [ "total_rows_per_pattern", "structdmf.html#a433d12914253f94155bba7996937c011", null ],
+    [ "total_samples", "structdmf.html#a098e3b8faa62d0a13e079d30ddb23397", null ],
+    [ "total_wavetables", "structdmf.html#a9bcbbe183f3fade875e454f2eaf92582", null ],
+    [ "wavetables", "structdmf.html#a080b2c8e7710d5040d3ee82c661f8f70", null ]
+];

@@ -1,8 +1,7 @@
-TARGET = out/libdmf.so
-LIBS = 
-CC = gcc
-CFLAGS = -Wall -Iinc -fPIC -O3
-CHMOD = chmod
+TARGET = out/libdmf.a
+CC = x86_64-w64-mingw32-gcc
+AR = x86_64-w64-mingw32-ar
+CFLAGS = -Wall -Iinc -O3
 
 .PHONY: default all clean
 
@@ -27,8 +26,7 @@ out/%.o: %.c $(HEADERS) pre-build
 .PRECIOUS: $(TARGET) $(OBJECTS)
 
 $(TARGET): $(OBJECTS)
-	$(CC) $(OBJECTS) -shared $(CFLAGS) $(LIBS) -o $@
-	$(CHMOD) +x $@
+	$(AR) rcs $@ $(OBJECTS)
 
 clean:
 	-rm -f out/*.o

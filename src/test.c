@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "dmfParser.h"
-#include "test.h"
+#include "dmf-parser.h"
 
 void display_dmf(dmf song){
     printf("system: %d\n", song.system);
@@ -217,7 +216,7 @@ void display_dmf(dmf song){
 }
 
 int verify_dmf(char *filename){
-    u8 *original = malloc(MAX_DMF_SIZE);
+    unsigned char *original = malloc(MAX_DMF_SIZE);
     int status = openDMF(filename, original);
     if (status) return status;
 
@@ -225,7 +224,7 @@ int verify_dmf(char *filename){
     status = parseDMF(original, &song);
     if (status) return status;
 
-    u8 *parsed = malloc(MAX_DMF_SIZE);
+    unsigned char *parsed = malloc(MAX_DMF_SIZE);
     size_t sizeOfParsed;
     dmfToBuffer (song, parsed, &sizeOfParsed);
 

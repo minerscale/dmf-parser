@@ -1,4 +1,4 @@
-#include "dmfParser.h"
+#include "dmf-parser.h"
 #include "miniz.h"
 
 int openFileIntoBuffer(char *filename, unsigned char *dest, size_t *length){
@@ -36,7 +36,7 @@ int decompressDMF(unsigned char *src, size_t src_length, unsigned char *dest)
 int openDMF(char *filename, unsigned char *dest)
 {
     // Decompress the dmf
-    unsigned char *compressedBuffer = (u8 *)malloc(MAX_DMF_SIZE);
+    unsigned char *compressedBuffer = (unsigned char *)malloc(MAX_DMF_SIZE);
     size_t bufferLength;
     int status = openFileIntoBuffer(filename, compressedBuffer, &bufferLength);
     if(status) return status;
@@ -49,10 +49,6 @@ int openDMF(char *filename, unsigned char *dest)
 
 int parseDMF(unsigned char *decompressed_dmf, dmf *dest)
 {
-    //u8 *decompressed_dmf = (u8 *)malloc(MAX_DMF_SIZE);
-    //int status = openDMF(filename, decompressed_dmf);
-    //if (status) return status;
-
     unsigned char *dmfp = decompressed_dmf; // Pointer to the current spot
 
     // Get the version and quit if it's invalid
@@ -138,10 +134,10 @@ int parseDMF(unsigned char *decompressed_dmf, dmf *dest)
     dest->total_rows_in_pattern_matrix = *dmfp++;
 
     // Create the instrument array, It's a dynamically allocated 2d array
-    dest->pattern_matrix_value = (u8 **)malloc(dest->system_total_channels * sizeof(u8 *));
+    dest->pattern_matrix_value = (unsigned char **)malloc(dest->system_total_channels * sizeof(unsigned char *));
 
     for (int i = 0; i < dest->system_total_channels; i++){
-        dest->pattern_matrix_value[i] = (u8 *)malloc(dest->total_rows_in_pattern_matrix * sizeof(u8));
+        dest->pattern_matrix_value[i] = (unsigned char *)malloc(dest->total_rows_in_pattern_matrix * sizeof(unsigned char));
     }
 
     // Set the dmf data
@@ -158,7 +154,7 @@ int parseDMF(unsigned char *decompressed_dmf, dmf *dest)
     for (int i = 0; i < dest->total_instruments; ++i){
         dest->instruments[i].name_length = *dmfp;
         // Create the name array
-        dest->instruments[i].name = (u8 *)calloc(*dmfp + 1, 1);
+        dest->instruments[i].name = (unsigned char *)calloc(*dmfp + 1, 1);
         memcpy(dest->instruments[i].name, dmfp + 1, *dmfp);
         dmfp += *dmfp + 1;
 
@@ -306,17 +302,17 @@ int parseDMF(unsigned char *decompressed_dmf, dmf *dest)
                 dmfp += 2;
                 dest->channels[i].rows[j][k].octave = *dmfp;
                 dmfp += 2;
-                dest->channels[i].rows[j][k].volume = *(s16 *)dmfp;
+                dest->channels[i].rows[j][k].volume = *(signed short *)dmfp;
                 dmfp += 2;
 
                 dest->channels[i].rows[j][k].commands = (note_command *)malloc(dest->channels[i].effect_columns_count * sizeof(note_command));
                 for (int m = 0; m < dest->channels[i].effect_columns_count; ++m){
-                    dest->channels[i].rows[j][k].commands[m].code = *(s16 *)dmfp;
+                    dest->channels[i].rows[j][k].commands[m].code = *(signed short *)dmfp;
                     dmfp += 2;
-                    dest->channels[i].rows[j][k].commands[m].value = *(s16 *)dmfp;
+                    dest->channels[i].rows[j][k].commands[m].value = *(signed short *)dmfp;
                     dmfp += 2;
                 }
-                dest->channels[i].rows[j][k].instrument = *(s16 *)dmfp;
+                dest->channels[i].rows[j][k].instrument = *(signed short *)dmfp;
                 dmfp += 2;
             }
         }
@@ -329,7 +325,7 @@ int parseDMF(unsigned char *decompressed_dmf, dmf *dest)
         dmfp += 4;
 
         dest->samples[i].name_length = *dmfp++;
-        dest->samples[i].name = (u8 *)calloc(dest->samples[i].name_length + 1 * sizeof(u8 *), 1);
+        dest->samples[i].name = (unsigned char *)calloc(dest->samples[i].name_length + 1 * sizeof(unsigned char *), 1);
         memcpy (dest->samples[i].name, dmfp, dest->samples[i].name_length);
         dmfp += dest->samples[i].name_length;
 
@@ -338,7 +334,7 @@ int parseDMF(unsigned char *decompressed_dmf, dmf *dest)
         dest->samples[i].amp = *dmfp++;
         dest->samples[i].bits = *dmfp++;
 
-        dest->samples[i].data = (u16 *)malloc(dest->samples[i].size * sizeof(u16));
+        dest->samples[i].data = (unsigned short *)malloc(dest->samples[i].size * sizeof(unsigned short));
         for (int j = 0; j < dest->samples[i].size; ++j){
             dest->samples[i].data[j] = *dmfp;
             dmfp += 2;
@@ -350,7 +346,7 @@ int parseDMF(unsigned char *decompressed_dmf, dmf *dest)
 
 int fileToDmfType(char *filename, dmf *dest)
 {
-    u8 *buffer = (u8 *)malloc(MAX_DMF_SIZE);
+    unsigned char *buffer = (unsigned char *)malloc(MAX_DMF_SIZE);
     int status = openDMF(filename, buffer);
     if (status) return status;
 
@@ -360,7 +356,7 @@ int fileToDmfType(char *filename, dmf *dest)
 }
 
 int dmfToBuffer(dmf src, unsigned char *dest, size_t *size){
-    u8 *bp = dest; // British Petrol
+    unsigned char *bp = dest; // British Petrol
     // Mime type and version
     char *str = ".DelekDefleMask.\x18";
     memcpy(bp, str, strlen(str));
@@ -594,19 +590,19 @@ int dmfToBuffer(dmf src, unsigned char *dest, size_t *size){
 
         for (int j = 0; j < src.total_rows_in_pattern_matrix; ++j){
             for (int k = 0; k < src.total_rows_per_pattern; ++k){
-                *(u16 *)bp = src.channels[i].rows[j][k].note;
+                *(unsigned short *)bp = src.channels[i].rows[j][k].note;
                 bp += 2;
-                *(u16 *)bp = src.channels[i].rows[j][k].octave;
+                *(unsigned short *)bp = src.channels[i].rows[j][k].octave;
                 bp += 2;
-                *(s16 *)bp = src.channels[i].rows[j][k].volume;
+                *(signed short *)bp = src.channels[i].rows[j][k].volume;
                 bp += 2;
                 for (int l = 0; l < src.channels[i].effect_columns_count; ++l){
-                    *(s16 *)bp = src.channels[i].rows[j][k].commands[l].code;
+                    *(signed short *)bp = src.channels[i].rows[j][k].commands[l].code;
                     bp += 2;
-                    *(s16 *)bp = src.channels[i].rows[j][k].commands[l].value;
+                    *(signed short *)bp = src.channels[i].rows[j][k].commands[l].value;
                     bp += 2;
                 }
-                *(s16 *)bp = src.channels[i].rows[j][k].instrument;
+                *(signed short *)bp = src.channels[i].rows[j][k].instrument;
                 bp += 2;
             }
         }
@@ -633,7 +629,7 @@ int dmfToBuffer(dmf src, unsigned char *dest, size_t *size){
         ++bp;
 
         for (int j = 0; j < src.samples[i].size; ++j){
-            *(u16 *)bp = src.samples[i].data[j];
+            *(unsigned short *)bp = src.samples[i].data[j];
             bp += 2;
         }
     }
@@ -655,13 +651,13 @@ int compressDMF(const unsigned char *src, size_t src_length, unsigned char *dest
 
 int writeDMF(char *filename, dmf src)
 {
-    u8 *dest = (u8 *)calloc(MAX_DMF_SIZE, 1);
+    unsigned char *dest = (unsigned char *)calloc(MAX_DMF_SIZE, 1);
 
     size_t buffer_len;
     int status = dmfToBuffer(src, dest, &buffer_len);
     if (status) return status;
 
-    u8 *comp_dest = malloc(MAX_DMF_SIZE);
+    unsigned char *comp_dest = malloc(MAX_DMF_SIZE);
     size_t comp_dest_length = MAX_DMF_SIZE;
     status = compressDMF(dest, buffer_len, comp_dest, &comp_dest_length);
     if (status) return status;
