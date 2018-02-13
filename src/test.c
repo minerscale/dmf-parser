@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "dmf-parser.h"
+#include "libdmf.h"
 
 void display_dmf(dmf song){
     printf("system: %d\n", song.system);

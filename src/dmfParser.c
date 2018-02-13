@@ -1,4 +1,4 @@
-#include "dmf-parser.h"
+#include "libdmf.h"
 #include "miniz.h"
 
 int openFileIntoBuffer(char *filename, unsigned char *dest, size_t *length){
