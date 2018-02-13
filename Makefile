@@ -1,6 +1,6 @@
 TARGET = out/libdmf.a
-CC = x86_64-w64-mingw32-gcc
-AR = x86_64-w64-mingw32-ar
+CC = gcc
+AR = ar
 CFLAGS = -Wall -Iinc -O3
 
 .PHONY: default all clean
