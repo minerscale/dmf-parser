@@ -1,6 +1,7 @@
 TARGET = out/libdmf.a
 CC = gcc
 AR = ar
+DOXYGEN = doxygen
 CFLAGS = -Wall -Iinc -O3
 
 .PHONY: default all clean
@@ -19,6 +20,9 @@ OBJECTS = $(addprefix out/, $(SRC_C:.c=.o))
 pre-build:
 	mkdir -p out/
 	mkdir -p out/src
+
+docs:
+	$(DOXYGEN) > /dev/null
 
 out/%.o: %.c $(HEADERS) pre-build
 	$(CC) $(CFLAGS) -c $< -o $@
