@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['parsedmf',['parseDMF',['../libdmf_8h.html#a8c491c848e6dbdc0d5d03ca92a143ca5',1,'dmfParser.c']]],
-  ['pattern_5fmatrix_5fvalue',['pattern_matrix_value',['../structdmf.html#a9abb45b393a0dc932ea36ab1369dfa6b',1,'dmf']]],
-  ['pitch',['pitch',['../structsample.html#abdfdc838c22fd5dc1fbb2a008d59672b',1,'sample']]]
+  ['octave',['octave',['../structnote__row.html#a9ceb4dde74d6c64fa6a0519f7564f39d',1,'note_row']]],
+  ['opendmf',['openDMF',['../libdmf_8h.html#a8b87b643aebb86305aac9b29543ad2b0',1,'dmfParser.c']]],
+  ['openfileintobuffer',['openFileIntoBuffer',['../libdmf_8h.html#a593d9dbc83facab07b817d8a0c65b3a1',1,'dmfParser.c']]]
 ];

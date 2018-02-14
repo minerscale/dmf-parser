@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mode',['mode',['../structinstrument.html#afc51e6220ad5a5867fcab8ff0fca9131',1,'instrument']]],
-  ['mult',['MULT',['../structFM__operator.html#a69471549f681b6216431413846e4868c',1,'FM_operator']]]
+  ['lfo',['LFO',['../structinstrument.html#ab0b1cba8b4245c5822a49ac5448d25fa',1,'instrument']]],
+  ['lfo2',['LFO2',['../structinstrument.html#ad68ce93adb00b99d9762ec068d0249d0',1,'instrument']]]
 ];

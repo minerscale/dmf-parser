@@ -13,26 +13,29 @@
 
 #include <stdlib.h>
 
-#define MAX_DMF_SIZE           16777216
+#define MAX_DMF_SIZE           16777216 //!< The maximum size (in bytes) of the decompressed DMF.
 
 // The system in the DMF
-#define SYSTEM_GENESIS         0x02 // (SYSTEM_TOTAL_CHANNELS 10)
-#define SYSTEM_GENESIS_EXT_CH3 0x12 // (SYSTEM_TOTAL_CHANNELS 13)
-#define SYSTEM_SMS             0x03 // (SYSTEM_TOTAL_CHANNELS 4)
-#define SYSTEM_GAMEBOY         0x04 // (SYSTEM_TOTAL_CHANNELS 4)
-#define SYSTEM_PCENGINE        0x05 // (SYSTEM_TOTAL_CHANNELS 6)
-#define SYSTEM_NES             0x06 // (SYSTEM_TOTAL_CHANNELS 5)
-#define SYSTEM_C64_SID_8580    0x07 // (SYSTEM_TOTAL_CHANNELS 3)
-#define SYSTEM_C64_SID_6581    0x47 // (SYSTEM_TOTAL_CHANNELS 3) // Supposed to be 0x17 was 71
-#define SYSTEM_YM2151          0x08 // (SYSTEM_TOTAL_CHANNELS 13)
+#define SYSTEM_GENESIS         0x02 //!< (SYSTEM_TOTAL_CHANNELS 10)
+#define SYSTEM_GENESIS_EXT_CH3 0x12 //!< (SYSTEM_TOTAL_CHANNELS 13)
+#define SYSTEM_SMS             0x03 //!< (SYSTEM_TOTAL_CHANNELS 4)
+#define SYSTEM_GAMEBOY         0x04 //!< (SYSTEM_TOTAL_CHANNELS 4)
+#define SYSTEM_PCENGINE        0x05 //!< (SYSTEM_TOTAL_CHANNELS 6)
+#define SYSTEM_NES             0x06 //!< (SYSTEM_TOTAL_CHANNELS 5)
+#define SYSTEM_C64_SID_8580    0x07 //!< (SYSTEM_TOTAL_CHANNELS 3)
+#define SYSTEM_C64_SID_6581    0x47 //!< (SYSTEM_TOTAL_CHANNELS 3) Supposed to be 0x17 was 71
+#define SYSTEM_YM2151          0x08 //!< (SYSTEM_TOTAL_CHANNELS 13)
 
-#define REIGON_PAL             0x00
-#define REIGON_NTSC            0x01
+#define REIGON_PAL             0x00 //!< The PAL Reigon. (Perfection At Last)
+#define REIGON_NTSC            0x01 //!< The NTSC Reigon. (Never The Same Colour)
 
-#define MODE_STD               0x00
-#define MODE_FM                0x01
+#define MODE_STD               0x00 //!< Standard mode
+#define MODE_FM                0x01 //!< Frequency Modulation mode.
 
 // Helper structs:
+//!
+//! All of the information to reconstruct an FM_operator
+//!
 typedef struct {
     unsigned char AM; //!< Amplitude Modulation enable, whether or not this operator will allow itself to be modified by the LFO.
     unsigned char AR; //!< Attack rate, the angle of initial amplitude increase.
@@ -48,6 +51,9 @@ typedef struct {
     unsigned char SSGMODE; //!< The SSG mode (BIT 4 = 0 Disabled, 1 Enabled, BITS 0,1,2 SSG_MODE)
 } FM_operator;
 
+//!
+//! Instrument info
+//!
 typedef struct {
     unsigned char name_length; //!< The length of the name of the instrument
     unsigned char *name; //!< The name of the instrument
@@ -92,46 +98,55 @@ typedef struct {
 
         // PER SYSTEM DATA:
             // C64:
-                unsigned char c64_triangle_wave_enabled;
-                unsigned char c64_saw_wave_enabled;
-                unsigned char c64_pulse_wave_enabled;
-                unsigned char c64_noise_wave_enabled;
-                unsigned char c64_attack;
-                unsigned char c64_decay;
-                unsigned char c64_sustain;
-                unsigned char c64_release;
-                unsigned char c64_pulse_width;
-                unsigned char c64_ring_modulation_enabled;
-                unsigned char c64_sync_modulation_enabled;
-                unsigned char c64_to_filter;
-                unsigned char c64_volume_macro_to_filter_cutoff_enabled;
-                unsigned char c64_use_filter_values_from_instrument;
+                unsigned char c64_triangle_wave_enabled; //!< C64 shite, see the name of this member
+                unsigned char c64_saw_wave_enabled; //!< C64 shite, see the name of this member
+                unsigned char c64_pulse_wave_enabled; //!< C64 shite, see the name of this member
+                unsigned char c64_noise_wave_enabled; //!< C64 shite, see the name of this member
+                unsigned char c64_attack; //!< C64 shite, see the name of this member
+                unsigned char c64_decay; //!< C64 shite, see the name of this member
+                unsigned char c64_sustain; //!< C64 shite, see the name of this member
+                unsigned char c64_release; //!< C64 shite, see the name of this member
+                unsigned char c64_pulse_width; //!< C64 shite, see the name of this member
+                unsigned char c64_ring_modulation_enabled; //!< C64 shite, see the name of this member
+                unsigned char c64_sync_modulation_enabled; //!< C64 shite, see the name of this member
+                unsigned char c64_to_filter; //!< C64 shite, see the name of this member
+                unsigned char c64_volume_macro_to_filter_cutoff_enabled; //!< C64 shite, see the name of this member
+                unsigned char c64_use_filter_values_from_instrument; //!< C64 shite, see the name of this member
                 //filter_globals
-                unsigned char c64_filter_resonance;
-                unsigned char c64_filter_cutoff;
-                unsigned char c64_filter_high_pass;
-                unsigned char c64_filter_band_pass;
-                unsigned char c64_filter_low_pass;
-                unsigned char c64_filter_ch2_off;
+                unsigned char c64_filter_resonance; //!< C64 shite, see the name of this member
+                unsigned char c64_filter_cutoff; //!< C64 shite, see the name of this member
+                unsigned char c64_filter_high_pass; //!< C64 shite, see the name of this member
+                unsigned char c64_filter_band_pass; //!< C64 shite, see the name of this member
+                unsigned char c64_filter_low_pass; //!< C64 shite, see the name of this member
+                unsigned char c64_filter_ch2_off; //!< C64 shite, see the name of this member
             // GAMEBOY
-                unsigned char gb_envelope_volume;
-                unsigned char gb_envelope_direction;
-                unsigned char gb_envelope_length;
-                unsigned char gb_sound_length;
+                unsigned char gb_envelope_volume; //!< GB shite, see the name of this member
+                unsigned char gb_envelope_direction; //!< GB shite, see the name of this member
+                unsigned char gb_envelope_length; //!< GB shite, see the name of this member
+                unsigned char gb_sound_length; //!< GB shite, see the name of this member
 }instrument;
 
 // Wavetable shite
+//!
+//! Wavetable info
+//!
 typedef struct {
     unsigned int size; //!< Size of the wavetable
     unsigned int *data; //!< Array of ints containing the wavetable data
 } wavetable;
 
 // Notes
+//!
+//! A command for a note
+//!
 typedef struct {
     signed short code; //!< The command for a row
     signed short value; //!< The value of that command
 } note_command;
 
+//!
+//! Row information
+//!
 typedef struct {
     unsigned short note; //!< The note. Ranges from [1-12]. 1 = C#, 12 = C
     unsigned short octave; //!< The octave of the note.
@@ -140,12 +155,18 @@ typedef struct {
     signed short instrument; //!< The instrument of the note. -1 if empty
 } note_row;
 
+//!
+//! A channles worth of information
+//!
 typedef struct {
     unsigned char effect_columns_count; //!< Number of effect columns for that channel
     note_row **rows; //!< An array of array of rows, first go down the pattern matrix, then the pattern
 } note_channel;
 
 // Samples
+//!
+//! Sample info!
+//!
 typedef struct {
     unsigned int size; //!< The size of the sample in unsigned ints
     unsigned char name_length; //!< Length of the sample name
@@ -160,6 +181,9 @@ typedef struct {
 } sample;
 
 // Actual DMF
+//!
+//! And finally, the actual dmf struct. Can't believe it took so long to get here.
+//!
 typedef struct {
 
     // SYSTEM INFORMATION
@@ -253,7 +277,7 @@ int compressDMF(const unsigned char *src, size_t src_length, unsigned char *dest
     \param src The source buffer.
     \param src_length The length of the source buffer
     \param dest destination buffer.
-    \param size A variable that gets filled with the size of the destination buffer.
+    \param dest_length A variable that gets filled with the size of the destination buffer.
 */
 
 int writeDMF(char *filename, dmf src);

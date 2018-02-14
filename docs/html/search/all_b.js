@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['octave',['octave',['../structnote__row.html#a9ceb4dde74d6c64fa6a0519f7564f39d',1,'note_row']]],
-  ['opendmf',['openDMF',['../libdmf_8h.html#a8b87b643aebb86305aac9b29543ad2b0',1,'dmfParser.c']]],
-  ['openfileintobuffer',['openFileIntoBuffer',['../libdmf_8h.html#a593d9dbc83facab07b817d8a0c65b3a1',1,'dmfParser.c']]]
+  ['name',['name',['../structinstrument.html#ac01bd2978f4966f706da8c2118ea0e1e',1,'instrument::name()'],['../structsample.html#ac646379d750ceff89bc8e9303434dd5e',1,'sample::name()'],['../structdmf.html#a86afd0182f341903632612fa4c42f60e',1,'dmf::name()']]],
+  ['name_5flength',['name_length',['../structinstrument.html#aba4e830a5dc33c52b0d9fb3bb59fef25',1,'instrument::name_length()'],['../structsample.html#aa9afeb19fe6144e934769507264cf71a',1,'sample::name_length()'],['../structdmf.html#aeb5f7edfa100fb02bda725f80f2af887',1,'dmf::name_length()']]],
+  ['note',['note',['../structnote__row.html#a2848a6f277181e3c17a1b5fe5c4ce228',1,'note_row']]],
+  ['note_5fchannel',['note_channel',['../structnote__channel.html',1,'']]],
+  ['note_5fcommand',['note_command',['../structnote__command.html',1,'']]],
+  ['note_5frow',['note_row',['../structnote__row.html',1,'']]]
 ];

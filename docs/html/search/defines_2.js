@@ -1,11 +1,5 @@
 var searchData=
 [
-  ['sample',['sample',['../structsample.html',1,'']]],
-  ['samples',['samples',['../structdmf.html#a0690400492e3b0b5eabed0d8c3862b67',1,'dmf']]],
-  ['size',['size',['../structwavetable.html#a53ac29853f6f30a9471fbcea5fbc5376',1,'wavetable::size()'],['../structsample.html#aac5bfca7f7a5d914ec0736b43d6cf054',1,'sample::size()']]],
-  ['sl',['SL',['../structFM__operator.html#af3b0da15cb43643bb6ec71d9de796683',1,'FM_operator']]],
-  ['ssgmode',['SSGMODE',['../structFM__operator.html#a7c323ccfc9ec7c5a52671da928123564',1,'FM_operator']]],
-  ['system',['system',['../structdmf.html#a7aa63af76c01cee1f52d63e8febcdfd9',1,'dmf']]],
   ['system_5fc64_5fsid_5f6581',['SYSTEM_C64_SID_6581',['../libdmf_8h.html#a46cabfba470685604bcf50a3aa902b0d',1,'libdmf.h']]],
   ['system_5fc64_5fsid_5f8580',['SYSTEM_C64_SID_8580',['../libdmf_8h.html#ad009cf3376c5974e17dd0fcc2ac02185',1,'libdmf.h']]],
   ['system_5fgameboy',['SYSTEM_GAMEBOY',['../libdmf_8h.html#a1acb1d60a3d9835886d99a25cc67c111',1,'libdmf.h']]],
@@ -14,6 +8,5 @@ var searchData=
   ['system_5fnes',['SYSTEM_NES',['../libdmf_8h.html#a30c085a5c373a05a9f0bb575d2ccdd63',1,'libdmf.h']]],
   ['system_5fpcengine',['SYSTEM_PCENGINE',['../libdmf_8h.html#a33ec43aeda11d9fc9f9e4805bccf7f78',1,'libdmf.h']]],
   ['system_5fsms',['SYSTEM_SMS',['../libdmf_8h.html#a86d4123be204c91cbe1f4d3ad71b75f3',1,'libdmf.h']]],
-  ['system_5ftotal_5fchannels',['system_total_channels',['../structdmf.html#a270b460cbca2eb80a84588d0219fe641',1,'dmf']]],
   ['system_5fym2151',['SYSTEM_YM2151',['../libdmf_8h.html#a2d8c292d51b4595611dde99f2649692d',1,'libdmf.h']]]
 ];

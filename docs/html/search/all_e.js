@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['sample',['sample',['../structsample.html',1,'']]],
-  ['samples',['samples',['../structdmf.html#a0690400492e3b0b5eabed0d8c3862b67',1,'dmf']]],
-  ['size',['size',['../structwavetable.html#a53ac29853f6f30a9471fbcea5fbc5376',1,'wavetable::size()'],['../structsample.html#aac5bfca7f7a5d914ec0736b43d6cf054',1,'sample::size()']]],
-  ['sl',['SL',['../structFM__operator.html#af3b0da15cb43643bb6ec71d9de796683',1,'FM_operator']]],
-  ['ssgmode',['SSGMODE',['../structFM__operator.html#a7c323ccfc9ec7c5a52671da928123564',1,'FM_operator']]],
-  ['system',['system',['../structdmf.html#a7aa63af76c01cee1f52d63e8febcdfd9',1,'dmf']]],
-  ['system_5ftotal_5fchannels',['system_total_channels',['../structdmf.html#a270b460cbca2eb80a84588d0219fe641',1,'dmf']]]
+  ['rate',['rate',['../structsample.html#afce4d3abc5bbd8eb7ab4e819de3e7bbd',1,'sample']]],
+  ['reigon',['reigon',['../structdmf.html#ae0e9a279519853b6a2a196d806c7b16a',1,'dmf']]],
+  ['reigon_5fntsc',['REIGON_NTSC',['../libdmf_8h.html#a914e5ff02ca1651fec733f0cf5bdf232',1,'libdmf.h']]],
+  ['reigon_5fpal',['REIGON_PAL',['../libdmf_8h.html#aed23f181e4022e673edde862809ff925',1,'libdmf.h']]],
+  ['rows',['rows',['../structnote__channel.html#a779b1b5157121ef7be14fd3cb83d7d45',1,'note_channel']]],
+  ['rr',['RR',['../structFM__operator.html#a7b8c975086e151c9c918eeec819b7076',1,'FM_operator']]],
+  ['rs',['RS',['../structFM__operator.html#a5b788752a5802f2dfc998fc305833a3f',1,'FM_operator']]]
 ];

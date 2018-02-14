@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['lfo',['LFO',['../structinstrument.html#ab0b1cba8b4245c5822a49ac5448d25fa',1,'instrument']]],
-  ['lfo2',['LFO2',['../structinstrument.html#ad68ce93adb00b99d9762ec068d0249d0',1,'instrument']]]
+  ['instrument',['instrument',['../structnote__row.html#a9e286e457836ada83d7867e266301896',1,'note_row']]],
+  ['instruments',['instruments',['../structdmf.html#a4c92b2fd51f654ab0a81bc642aa6d23e',1,'dmf']]]
 ];

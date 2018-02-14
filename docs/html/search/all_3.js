@@ -3,7 +3,7 @@ var searchData=
   ['d2r',['D2R',['../structFM__operator.html#a21391dabc3fae1efec56deb828e79033',1,'FM_operator']]],
   ['data',['data',['../structwavetable.html#a28a722d09db2bbb529c9a6a1ad917910',1,'wavetable::data()'],['../structsample.html#acd0693780e0f008fbd23841d2b2c80cd',1,'sample::data()']]],
   ['decompressdmf',['decompressDMF',['../libdmf_8h.html#acd48aa95fce6905a0b0a68ca0dbb3f1e',1,'dmfParser.c']]],
-  ['display_5fdmf',['display_dmf',['../libdmf_8h.html#a558a44697e362623eef3d58f0fb958f5',1,'libdmf.h']]],
+  ['display_5fdmf',['display_dmf',['../libdmf_8h.html#a558a44697e362623eef3d58f0fb958f5',1,'test.c']]],
   ['dmf',['dmf',['../structdmf.html',1,'']]],
   ['dmftobuffer',['dmfToBuffer',['../libdmf_8h.html#af3d888d968415a8b9176198c0dcb9d48',1,'dmfParser.c']]],
   ['dr',['DR',['../structFM__operator.html#aeeae8d439f4fce8729560b4dc507b13a',1,'FM_operator']]],

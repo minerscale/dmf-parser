@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['wavetable_5fenvelope',['wavetable_envelope',['../structinstrument.html#a9753c05086854ef77542cb5b441e3297',1,'instrument']]],
-  ['wavetable_5fenvelope_5fsize',['wavetable_envelope_size',['../structinstrument.html#a42eed625a5badeee9b1472ec49d93122',1,'instrument']]],
-  ['wavetable_5floop_5fposition',['wavetable_loop_position',['../structinstrument.html#a22a55b6f2734977b652888e84809d8f3',1,'instrument']]],
-  ['wavetables',['wavetables',['../structdmf.html#a080b2c8e7710d5040d3ee82c661f8f70',1,'dmf']]]
+  ['value',['value',['../structnote__command.html#a963b820bc04b8514037ecf3be32bc998',1,'note_command']]],
+  ['volume',['volume',['../structnote__row.html#afdd2cbe4de1201676e73e9a9b25e773d',1,'note_row']]],
+  ['volume_5fenvelope',['volume_envelope',['../structinstrument.html#a6a5b6b27157720526662308f5c18d8f0',1,'instrument']]],
+  ['volume_5fenvelope_5fsize',['volume_envelope_size',['../structinstrument.html#a2ef795cd93d6f8bde7a421525f494471',1,'instrument']]],
+  ['volume_5floop_5fposition',['volume_loop_position',['../structinstrument.html#a7a7478002cf826eb1cf0df07bd06f625',1,'instrument']]]
 ];
