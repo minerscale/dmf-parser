@@ -28,7 +28,7 @@ var libdmf_8h =
     [ "dmfToBuffer", "libdmf_8h.html#af3d888d968415a8b9176198c0dcb9d48", null ],
     [ "fileToDmfType", "libdmf_8h.html#a8dc6493cb0904df68e9465cdf886f728", null ],
     [ "openDMF", "libdmf_8h.html#a8b87b643aebb86305aac9b29543ad2b0", null ],
-    [ "openFileIntoBuffer", "libdmf_8h.html#a593d9dbc83facab07b817d8a0c65b3a1", null ],
+    [ "openDmfFileIntoBuffer", "libdmf_8h.html#ae8dd002830fc02e1fe4885c9070060e3", null ],
     [ "parseDMF", "libdmf_8h.html#a8c491c848e6dbdc0d5d03ca92a143ca5", null ],
     [ "verify_dmf", "libdmf_8h.html#aa3d8a22fa5f32dcaa7be8678adf0e25e", null ],
     [ "writeDMF", "libdmf_8h.html#a19b9fe2d630621947c842d71c2ae762a", null ]

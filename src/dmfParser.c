@@ -1,13 +1,18 @@
 #include "libdmf.h"
 #include "miniz.h"
 
-int openFileIntoBuffer(char *filename, unsigned char *dest, size_t *length){
+int openDmfFileIntoBuffer(char *filename, unsigned char *dest, size_t *length){
     FILE *fp = fopen(filename, "rb");
 
     // Get size of file
     fseek(fp, 0, SEEK_END);
     size_t lengthOfFile = ftell(fp);
     fseek(fp, 0, SEEK_SET);
+
+    if (lengthOfFile > MAX_DMF_SIZE){
+        fclose(fp);
+        return 5;
+    }
 
     // Read the file into a buffer
     if(fread(dest, lengthOfFile, 1, fp) == 0){
@@ -38,10 +43,11 @@ int openDMF(char *filename, unsigned char *dest)
     // Decompress the dmf
     unsigned char *compressedBuffer = (unsigned char *)malloc(MAX_DMF_SIZE);
     size_t bufferLength;
-    int status = openFileIntoBuffer(filename, compressedBuffer, &bufferLength);
+    int status = openDmfFileIntoBuffer(filename, compressedBuffer, &bufferLength);
     if(status) return status;
 
     status = decompressDMF(compressedBuffer, bufferLength, dest);
+    free(compressedBuffer);
     if(status) return status;
 
     return 0;

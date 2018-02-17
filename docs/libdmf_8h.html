@@ -97,8 +97,6 @@ $(document).ready(function(){initNavTree('libdmf_8h.html','');});
 Include dependency graph for libdmf.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="libdmf_8h__incl.png" border="0" usemap="#libdmf_8h" alt=""/></div>
-<map name="libdmf_8h" id="libdmf_8h">
-</map>
 </div>
 </div>
 <p><a href="libdmf_8h_source.html">Go to the source code of this file.</a></p>
@@ -183,26 +181,26 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a593d9dbc83facab07b817d8a0c65b3a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libdmf_8h.html#a593d9dbc83facab07b817d8a0c65b3a1">openFileIntoBuffer</a> (char *filename, unsigned char *dest, size_t *length)</td></tr>
-<tr class="memdesc:a593d9dbc83facab07b817d8a0c65b3a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use a filename to open a file into a memory buffer.  <a href="#a593d9dbc83facab07b817d8a0c65b3a1">More...</a><br /></td></tr>
-<tr class="separator:a593d9dbc83facab07b817d8a0c65b3a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8dd002830fc02e1fe4885c9070060e3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libdmf_8h.html#ae8dd002830fc02e1fe4885c9070060e3">openDmfFileIntoBuffer</a> (char *filename, unsigned char *dest, size_t *length)</td></tr>
+<tr class="memdesc:ae8dd002830fc02e1fe4885c9070060e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use a filename to open a file into a memory buffer.  <a href="#ae8dd002830fc02e1fe4885c9070060e3">More...</a><br /></td></tr>
+<tr class="separator:ae8dd002830fc02e1fe4885c9070060e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd48aa95fce6905a0b0a68ca0dbb3f1e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libdmf_8h.html#acd48aa95fce6905a0b0a68ca0dbb3f1e">decompressDMF</a> (unsigned char *src, size_t src_length, unsigned char *dest)</td></tr>
-<tr class="memdesc:acd48aa95fce6905a0b0a68ca0dbb3f1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes buffer from <a class="el" href="libdmf_8h.html#a593d9dbc83facab07b817d8a0c65b3a1" title="Use a filename to open a file into a memory buffer. ">openFileIntoBuffer()</a> and decompresses it using miniz.h.  <a href="#acd48aa95fce6905a0b0a68ca0dbb3f1e">More...</a><br /></td></tr>
+<tr class="memdesc:acd48aa95fce6905a0b0a68ca0dbb3f1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes buffer from <a class="el" href="libdmf_8h.html#ae8dd002830fc02e1fe4885c9070060e3" title="Use a filename to open a file into a memory buffer. ">openDmfFileIntoBuffer()</a> and decompresses it using miniz.h.  <a href="#acd48aa95fce6905a0b0a68ca0dbb3f1e">More...</a><br /></td></tr>
 <tr class="separator:acd48aa95fce6905a0b0a68ca0dbb3f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b87b643aebb86305aac9b29543ad2b0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libdmf_8h.html#a8b87b643aebb86305aac9b29543ad2b0">openDMF</a> (char *filename, unsigned char *dest)</td></tr>
-<tr class="memdesc:a8b87b643aebb86305aac9b29543ad2b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A combination of <a class="el" href="libdmf_8h.html#a593d9dbc83facab07b817d8a0c65b3a1" title="Use a filename to open a file into a memory buffer. ">openFileIntoBuffer()</a> and <a class="el" href="libdmf_8h.html#acd48aa95fce6905a0b0a68ca0dbb3f1e" title="Takes buffer from openFileIntoBuffer() and decompresses it using miniz.h. ">decompressDMF()</a>  <a href="#a8b87b643aebb86305aac9b29543ad2b0">More...</a><br /></td></tr>
+<tr class="memdesc:a8b87b643aebb86305aac9b29543ad2b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A combination of <a class="el" href="libdmf_8h.html#ae8dd002830fc02e1fe4885c9070060e3" title="Use a filename to open a file into a memory buffer. ">openDmfFileIntoBuffer()</a> and <a class="el" href="libdmf_8h.html#acd48aa95fce6905a0b0a68ca0dbb3f1e" title="Takes buffer from openDmfFileIntoBuffer() and decompresses it using miniz.h. ">decompressDMF()</a>  <a href="#a8b87b643aebb86305aac9b29543ad2b0">More...</a><br /></td></tr>
 <tr class="separator:a8b87b643aebb86305aac9b29543ad2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c491c848e6dbdc0d5d03ca92a143ca5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libdmf_8h.html#a8c491c848e6dbdc0d5d03ca92a143ca5">parseDMF</a> (unsigned char *decompressed_dmf, <a class="el" href="structdmf.html">dmf</a> *dest)</td></tr>
 <tr class="memdesc:a8c491c848e6dbdc0d5d03ca92a143ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse an uncompressed buffer into the <a class="el" href="structdmf.html">dmf</a> type.  <a href="#a8c491c848e6dbdc0d5d03ca92a143ca5">More...</a><br /></td></tr>
 <tr class="separator:a8c491c848e6dbdc0d5d03ca92a143ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dc6493cb0904df68e9465cdf886f728"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libdmf_8h.html#a8dc6493cb0904df68e9465cdf886f728">fileToDmfType</a> (char *filename, <a class="el" href="structdmf.html">dmf</a> *dest)</td></tr>
-<tr class="memdesc:a8dc6493cb0904df68e9465cdf886f728"><td class="mdescLeft">&#160;</td><td class="mdescRight">A combination of <a class="el" href="libdmf_8h.html#a8b87b643aebb86305aac9b29543ad2b0" title="A combination of openFileIntoBuffer() and decompressDMF() ">openDMF()</a> and <a class="el" href="libdmf_8h.html#a8c491c848e6dbdc0d5d03ca92a143ca5" title="Parse an uncompressed buffer into the dmf type. ">parseDMF()</a>. Takes a file and puts it int the <a class="el" href="structdmf.html">dmf</a> type.  <a href="#a8dc6493cb0904df68e9465cdf886f728">More...</a><br /></td></tr>
+<tr class="memdesc:a8dc6493cb0904df68e9465cdf886f728"><td class="mdescLeft">&#160;</td><td class="mdescRight">A combination of <a class="el" href="libdmf_8h.html#a8b87b643aebb86305aac9b29543ad2b0" title="A combination of openDmfFileIntoBuffer() and decompressDMF() ">openDMF()</a> and <a class="el" href="libdmf_8h.html#a8c491c848e6dbdc0d5d03ca92a143ca5" title="Parse an uncompressed buffer into the dmf type. ">parseDMF()</a>. Takes a file and puts it int the <a class="el" href="structdmf.html">dmf</a> type.  <a href="#a8dc6493cb0904df68e9465cdf886f728">More...</a><br /></td></tr>
 <tr class="separator:a8dc6493cb0904df68e9465cdf886f728"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3d888d968415a8b9176198c0dcb9d48"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libdmf_8h.html#af3d888d968415a8b9176198c0dcb9d48">dmfToBuffer</a> (<a class="el" href="structdmf.html">dmf</a> src, unsigned char *dest, size_t *size)</td></tr>
 <tr class="memdesc:af3d888d968415a8b9176198c0dcb9d48"><td class="mdescLeft">&#160;</td><td class="mdescRight">The opposite of <a class="el" href="libdmf_8h.html#a8c491c848e6dbdc0d5d03ca92a143ca5" title="Parse an uncompressed buffer into the dmf type. ">parseDMF()</a>. Converts <a class="el" href="structdmf.html">dmf</a> type to uncompressed dmf file.  <a href="#af3d888d968415a8b9176198c0dcb9d48">More...</a><br /></td></tr>
 <tr class="separator:af3d888d968415a8b9176198c0dcb9d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4029eb315242eef6ea48e2c5395ec783"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libdmf_8h.html#a4029eb315242eef6ea48e2c5395ec783">compressDMF</a> (const unsigned char *src, size_t src_length, unsigned char *dest, size_t *dest_length)</td></tr>
-<tr class="memdesc:a4029eb315242eef6ea48e2c5395ec783"><td class="mdescLeft">&#160;</td><td class="mdescRight">The opposite of <a class="el" href="libdmf_8h.html#acd48aa95fce6905a0b0a68ca0dbb3f1e" title="Takes buffer from openFileIntoBuffer() and decompresses it using miniz.h. ">decompressDMF()</a>. Converts an uncompressed buffer to a compressed buffer.  <a href="#a4029eb315242eef6ea48e2c5395ec783">More...</a><br /></td></tr>
+<tr class="memdesc:a4029eb315242eef6ea48e2c5395ec783"><td class="mdescLeft">&#160;</td><td class="mdescRight">The opposite of <a class="el" href="libdmf_8h.html#acd48aa95fce6905a0b0a68ca0dbb3f1e" title="Takes buffer from openDmfFileIntoBuffer() and decompresses it using miniz.h. ">decompressDMF()</a>. Converts an uncompressed buffer to a compressed buffer.  <a href="#a4029eb315242eef6ea48e2c5395ec783">More...</a><br /></td></tr>
 <tr class="separator:a4029eb315242eef6ea48e2c5395ec783"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19b9fe2d630621947c842d71c2ae762a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libdmf_8h.html#a19b9fe2d630621947c842d71c2ae762a">writeDMF</a> (char *filename, <a class="el" href="structdmf.html">dmf</a> src)</td></tr>
 <tr class="memdesc:a19b9fe2d630621947c842d71c2ae762a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A combination of <a class="el" href="libdmf_8h.html#a4029eb315242eef6ea48e2c5395ec783" title="The opposite of decompressDMF(). Converts an uncompressed buffer to a compressed buffer. ">compressDMF()</a> and <a class="el" href="libdmf_8h.html#af3d888d968415a8b9176198c0dcb9d48" title="The opposite of parseDMF(). Converts dmf type to uncompressed dmf file. ">dmfToBuffer()</a>. Converts <a class="el" href="structdmf.html">dmf</a> type to compressed buffer and writes it to file.  <a href="#a19b9fe2d630621947c842d71c2ae762a">More...</a><br /></td></tr>
@@ -255,7 +253,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The opposite of <a class="el" href="libdmf_8h.html#acd48aa95fce6905a0b0a68ca0dbb3f1e" title="Takes buffer from openFileIntoBuffer() and decompresses it using miniz.h. ">decompressDMF()</a>. Converts an uncompressed buffer to a compressed buffer. </p>
+<p>The opposite of <a class="el" href="libdmf_8h.html#acd48aa95fce6905a0b0a68ca0dbb3f1e" title="Takes buffer from openDmfFileIntoBuffer() and decompresses it using miniz.h. ">decompressDMF()</a>. Converts an uncompressed buffer to a compressed buffer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">src</td><td>The source buffer. </td></tr>
@@ -300,7 +298,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Takes buffer from <a class="el" href="libdmf_8h.html#a593d9dbc83facab07b817d8a0c65b3a1" title="Use a filename to open a file into a memory buffer. ">openFileIntoBuffer()</a> and decompresses it using miniz.h. </p>
+<p>Takes buffer from <a class="el" href="libdmf_8h.html#ae8dd002830fc02e1fe4885c9070060e3" title="Use a filename to open a file into a memory buffer. ">openDmfFileIntoBuffer()</a> and decompresses it using miniz.h. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">src</td><td>The source buffer. </td></tr>
@@ -408,7 +406,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>A combination of <a class="el" href="libdmf_8h.html#a8b87b643aebb86305aac9b29543ad2b0" title="A combination of openFileIntoBuffer() and decompressDMF() ">openDMF()</a> and <a class="el" href="libdmf_8h.html#a8c491c848e6dbdc0d5d03ca92a143ca5" title="Parse an uncompressed buffer into the dmf type. ">parseDMF()</a>. Takes a file and puts it int the <a class="el" href="structdmf.html">dmf</a> type. </p>
+<p>A combination of <a class="el" href="libdmf_8h.html#a8b87b643aebb86305aac9b29543ad2b0" title="A combination of openDmfFileIntoBuffer() and decompressDMF() ">openDMF()</a> and <a class="el" href="libdmf_8h.html#a8c491c848e6dbdc0d5d03ca92a143ca5" title="Parse an uncompressed buffer into the dmf type. ">parseDMF()</a>. Takes a file and puts it int the <a class="el" href="structdmf.html">dmf</a> type. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>The path to the file to open. </td></tr>
@@ -445,7 +443,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>A combination of <a class="el" href="libdmf_8h.html#a593d9dbc83facab07b817d8a0c65b3a1" title="Use a filename to open a file into a memory buffer. ">openFileIntoBuffer()</a> and <a class="el" href="libdmf_8h.html#acd48aa95fce6905a0b0a68ca0dbb3f1e" title="Takes buffer from openFileIntoBuffer() and decompresses it using miniz.h. ">decompressDMF()</a> </p>
+<p>A combination of <a class="el" href="libdmf_8h.html#ae8dd002830fc02e1fe4885c9070060e3" title="Use a filename to open a file into a memory buffer. ">openDmfFileIntoBuffer()</a> and <a class="el" href="libdmf_8h.html#acd48aa95fce6905a0b0a68ca0dbb3f1e" title="Takes buffer from openDmfFileIntoBuffer() and decompresses it using miniz.h. ">decompressDMF()</a> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>The path to the file to open. </td></tr>
@@ -456,14 +454,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a593d9dbc83facab07b817d8a0c65b3a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a593d9dbc83facab07b817d8a0c65b3a1">&#9670;&nbsp;</a></span>openFileIntoBuffer()</h2>
+<a id="ae8dd002830fc02e1fe4885c9070060e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8dd002830fc02e1fe4885c9070060e3">&#9670;&nbsp;</a></span>openDmfFileIntoBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int openFileIntoBuffer </td>
+          <td class="memname">int openDmfFileIntoBuffer </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>filename</em>, </td>

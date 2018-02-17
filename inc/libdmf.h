@@ -225,8 +225,8 @@ typedef struct {
     sample *samples; //!< Actual sample data
 } dmf;
 
-int openFileIntoBuffer(char *filename, unsigned char *dest, size_t *length);
-/*! \fn int openFileIntoBuffer(char *filename, unsigned char *dest, size_t *length)
+int openDmfFileIntoBuffer(char *filename, unsigned char *dest, size_t *length);
+/*! \fn int openDmfFileIntoBuffer(char *filename, unsigned char *dest, size_t *length)
     \brief Use a filename to open a file into a memory buffer.
     \param filename The path to the file to open.
     \param dest The buffer write to.
@@ -235,7 +235,7 @@ int openFileIntoBuffer(char *filename, unsigned char *dest, size_t *length);
 
 int decompressDMF(unsigned char *src, size_t src_length, unsigned char *dest);
 /*! \fn int decompressDMF(unsigned char *src, size_t src_length, unsigned char *dest)
-    \brief Takes buffer from openFileIntoBuffer() and decompresses it using miniz.h
+    \brief Takes buffer from openDmfFileIntoBuffer() and decompresses it using miniz.h
     \param src The source buffer.
     \param src_length The length of the source buffer.
     \param dest A destination buffers.
@@ -243,7 +243,7 @@ int decompressDMF(unsigned char *src, size_t src_length, unsigned char *dest);
 
 int openDMF(char *filename, unsigned char *dest);
 /*! \fn int openDMF(char *filename, unsigned char *dest)
-    \brief A combination of openFileIntoBuffer() and decompressDMF()
+    \brief A combination of openDmfFileIntoBuffer() and decompressDMF()
     \param filename The path to the file to open.
     \param dest The destination buffer.
 */
