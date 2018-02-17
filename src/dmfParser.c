@@ -342,7 +342,7 @@ int parseDMF(unsigned char *decompressed_dmf, dmf *dest)
 
         dest->samples[i].data = (unsigned short *)malloc(dest->samples[i].size * sizeof(unsigned short));
         for (int j = 0; j < dest->samples[i].size; ++j){
-            dest->samples[i].data[j] = *dmfp;
+            dest->samples[i].data[j] = *(unsigned short *)dmfp;
             dmfp += 2;
         }
     }

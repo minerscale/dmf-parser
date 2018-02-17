@@ -205,12 +205,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a19b9fe2d630621947c842d71c2ae762a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libdmf_8h.html#a19b9fe2d630621947c842d71c2ae762a">writeDMF</a> (char *filename, <a class="el" href="structdmf.html">dmf</a> src)</td></tr>
 <tr class="memdesc:a19b9fe2d630621947c842d71c2ae762a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A combination of <a class="el" href="libdmf_8h.html#a4029eb315242eef6ea48e2c5395ec783" title="The opposite of decompressDMF(). Converts an uncompressed buffer to a compressed buffer. ">compressDMF()</a> and <a class="el" href="libdmf_8h.html#af3d888d968415a8b9176198c0dcb9d48" title="The opposite of parseDMF(). Converts dmf type to uncompressed dmf file. ">dmfToBuffer()</a>. Converts <a class="el" href="structdmf.html">dmf</a> type to compressed buffer and writes it to file.  <a href="#a19b9fe2d630621947c842d71c2ae762a">More...</a><br /></td></tr>
 <tr class="separator:a19b9fe2d630621947c842d71c2ae762a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a558a44697e362623eef3d58f0fb958f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libdmf_8h.html#a558a44697e362623eef3d58f0fb958f5">display_dmf</a> (<a class="el" href="structdmf.html">dmf</a> song)</td></tr>
-<tr class="memdesc:a558a44697e362623eef3d58f0fb958f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print out everything to do with a <a class="el" href="structdmf.html">dmf</a>.  <a href="#a558a44697e362623eef3d58f0fb958f5">More...</a><br /></td></tr>
-<tr class="separator:a558a44697e362623eef3d58f0fb958f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3d8a22fa5f32dcaa7be8678adf0e25e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libdmf_8h.html#aa3d8a22fa5f32dcaa7be8678adf0e25e">verify_dmf</a> (char *filename)</td></tr>
-<tr class="memdesc:aa3d8a22fa5f32dcaa7be8678adf0e25e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify a DMF's integrety (or for that matter libdmf's :/)  <a href="#aa3d8a22fa5f32dcaa7be8678adf0e25e">More...</a><br /></td></tr>
-<tr class="separator:aa3d8a22fa5f32dcaa7be8678adf0e25e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9a02c38fb5d769873d8b385493a6ea4"><td class="memItemLeft" align="right" valign="top"><a id="af9a02c38fb5d769873d8b385493a6ea4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>displayDMF</b> (<a class="el" href="structdmf.html">dmf</a> song)</td></tr>
+<tr class="separator:af9a02c38fb5d769873d8b385493a6ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a616c69c10f000de1bb04b5206ff936d9"><td class="memItemLeft" align="right" valign="top"><a id="a616c69c10f000de1bb04b5206ff936d9"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>verifyDMF</b> (char *filename)</td></tr>
+<tr class="separator:a616c69c10f000de1bb04b5206ff936d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main library file. </p>
@@ -304,32 +304,6 @@ Functions</h2></td></tr>
     <tr><td class="paramname">src</td><td>The source buffer. </td></tr>
     <tr><td class="paramname">src_length</td><td>The length of the source buffer. </td></tr>
     <tr><td class="paramname">dest</td><td>A destination buffers. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a558a44697e362623eef3d58f0fb958f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a558a44697e362623eef3d58f0fb958f5">&#9670;&nbsp;</a></span>display_dmf()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void display_dmf </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structdmf.html">dmf</a>&#160;</td>
-          <td class="paramname"><em>song</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Print out everything to do with a <a class="el" href="structdmf.html">dmf</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">song</td><td>the dmf to print </td></tr>
   </table>
   </dd>
 </dl>
@@ -529,32 +503,6 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">decompressed_dmf</td><td>uncompressed buffer to use as input. </td></tr>
     <tr><td class="paramname">dest</td><td>destination <a class="el" href="structdmf.html">dmf</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aa3d8a22fa5f32dcaa7be8678adf0e25e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3d8a22fa5f32dcaa7be8678adf0e25e">&#9670;&nbsp;</a></span>verify_dmf()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int verify_dmf </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>filename</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Verify a DMF's integrety (or for that matter libdmf's :/) </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">filename</td><td>The path to open, verify and close. </td></tr>
   </table>
   </dd>
 </dl>

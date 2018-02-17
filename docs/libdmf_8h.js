@@ -24,12 +24,12 @@ var libdmf_8h =
     [ "SYSTEM_YM2151", "libdmf_8h.html#a2d8c292d51b4595611dde99f2649692d", null ],
     [ "compressDMF", "libdmf_8h.html#a4029eb315242eef6ea48e2c5395ec783", null ],
     [ "decompressDMF", "libdmf_8h.html#acd48aa95fce6905a0b0a68ca0dbb3f1e", null ],
-    [ "display_dmf", "libdmf_8h.html#a558a44697e362623eef3d58f0fb958f5", null ],
+    [ "displayDMF", "libdmf_8h.html#af9a02c38fb5d769873d8b385493a6ea4", null ],
     [ "dmfToBuffer", "libdmf_8h.html#af3d888d968415a8b9176198c0dcb9d48", null ],
     [ "fileToDmfType", "libdmf_8h.html#a8dc6493cb0904df68e9465cdf886f728", null ],
     [ "openDMF", "libdmf_8h.html#a8b87b643aebb86305aac9b29543ad2b0", null ],
     [ "openDmfFileIntoBuffer", "libdmf_8h.html#ae8dd002830fc02e1fe4885c9070060e3", null ],
     [ "parseDMF", "libdmf_8h.html#a8c491c848e6dbdc0d5d03ca92a143ca5", null ],
-    [ "verify_dmf", "libdmf_8h.html#aa3d8a22fa5f32dcaa7be8678adf0e25e", null ],
+    [ "verifyDMF", "libdmf_8h.html#a616c69c10f000de1bb04b5206ff936d9", null ],
     [ "writeDMF", "libdmf_8h.html#a19b9fe2d630621947c842d71c2ae762a", null ]
 ];

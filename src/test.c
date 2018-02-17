@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "libdmf.h"
 
-void display_dmf(dmf song){
+void displayDMF(dmf song){
     printf("system: %d\n", song.system);
     printf("system_total_channels: %d\n", song.system_total_channels);
     
@@ -215,7 +215,7 @@ void display_dmf(dmf song){
     }
 }
 
-int verify_dmf(char *filename){
+int verifyDMF(char *filename){
     unsigned char *original = malloc(MAX_DMF_SIZE);
     int status = openDMF(filename, original);
     if (status) return status;

@@ -288,13 +288,13 @@ int writeDMF(char *filename, dmf src);
 */
 
 // Testing.
-void display_dmf(dmf song);
+void displayDMF(dmf song);
 /*! \fn void display_dmf(dmf song)
     \brief Print out everything to do with a #dmf
     \param song the dmf to print
 */
 
-int verify_dmf(char *filename);
+int verifyDMF(char *filename);
 /*! \fn int verify_dmf(char *filename);
     \brief Verify a DMF's integrety (or for that matter libdmf's :/)
     \param filename The path to open, verify and close.
