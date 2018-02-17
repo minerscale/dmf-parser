@@ -342,7 +342,7 @@ int parseDMF(unsigned char *decompressed_dmf, dmf *dest)
 
         dest->samples[i].data = (unsigned short *)malloc(dest->samples[i].size * sizeof(unsigned short));
         for (int j = 0; j < dest->samples[i].size; ++j){
-            dest->samples[i].data[j] = *dmfp;
+            dest->samples[i].data[j] = *(unsigned short *)dmfp;
             dmfp += 2;
         }
     }
@@ -647,7 +647,7 @@ int dmfToBuffer(dmf src, unsigned char *dest, size_t *size){
 int compressDMF(const unsigned char *src, size_t src_length, unsigned char *dest, size_t *dest_length)
 {
     // Decompress the dmf and store it in the dest
-    int cmp_status = mz_compress (dest, (mz_ulong *)dest_length, src, src_length);
+    int cmp_status = mz_compress2 (dest, (mz_ulong *)dest_length, src, src_length, 10);
     if (cmp_status){
         return (cmp_status);
     }
