@@ -156,7 +156,7 @@ int parseDMF(unsigned char *decompressed_dmf, dmf *dest)
     // Instrument data
     dest->total_instruments = *dmfp++;
 
-    dest->instruments = (instrument *)malloc(sizeof(instrument) * dest->total_instruments);
+    dest->instruments = (instrument *)calloc(sizeof(instrument) * dest->total_instruments, 1);
     for (int i = 0; i < dest->total_instruments; ++i){
         dest->instruments[i].name_length = *dmfp;
         // Create the name array
@@ -358,6 +358,7 @@ int fileToDmfType(char *filename, dmf *dest)
 
     status = parseDMF(buffer, dest);
     if (status) return status;
+    free (buffer);
     return 0;
 }
 
@@ -671,6 +672,56 @@ int writeDMF(char *filename, dmf src)
 
     FILE *fp = fopen(filename, "wb");
     fwrite(comp_dest, comp_dest_length, 1, fp);
+
+    return 0;
+}
+
+int freeDMF(dmf *src)
+{
+    free(src->name);
+    free(src->author);
+
+    for (int i = 0; i < src->system_total_channels; ++i){
+        free(src->pattern_matrix_value[i]);
+    }
+    free(src->pattern_matrix_value);
+
+    for (int i = 0; i < src->total_instruments; ++i){
+        free(src->instruments[i].name);
+        if (src->instruments[i].mode == MODE_FM){
+            free(src->instruments[i].FM_operators);
+        }
+
+        if (src->system != SYSTEM_GAMEBOY){
+            free(src->instruments[i].volume_envelope);
+        }
+        free(src->instruments[i].arpeggio_envelope);
+        free(src->instruments[i].duty_noise_envelope);
+        free(src->instruments[i].wavetable_envelope);
+    }
+    free(src->instruments);
+
+    for (int i = 0; i < src->total_wavetables; ++i){
+        free(src->wavetables[i].data);
+    }
+    free(src->wavetables);
+
+    for (int i = 0; i < src->system_total_channels; ++i){
+        for (int j = 0; j < src->total_rows_in_pattern_matrix; ++j){
+            for (int k = 0; k < src->total_rows_per_pattern; ++k){
+                free(src->channels[i].rows[j][k].commands);
+            }
+            free(src->channels[i].rows[j]);
+        }
+        free(src->channels[i].rows);
+    }
+    free(src->channels);
+
+    for (int i = 0; i < src->total_samples; ++i){
+        free(src->samples[i].name);
+        free(src->samples[i].data);
+    }
+    free(src->samples);
 
     return 0;
 }

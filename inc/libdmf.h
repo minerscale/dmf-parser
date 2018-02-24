@@ -289,15 +289,21 @@ int writeDMF(char *filename, dmf src);
 
 // Testing.
 void displayDMF(dmf song);
-/*! \fn void display_dmf(dmf song)
+/*! \fn void displayDMF(dmf song)
     \brief Print out everything to do with a #dmf
     \param song the dmf to print
 */
 
 int verifyDMF(char *filename);
-/*! \fn int verify_dmf(char *filename);
+/*! \fn int verifyDMF(char *filename)
     \brief Verify a DMF's integrety (or for that matter libdmf's :/)
     \param filename The path to open, verify and close.
+*/
+
+int freeDMF(dmf *src);
+/*! \fn int freeDMF(dmf *src);
+    \brief Free a DMF's resources.
+    \param src Source DMF.
 */
 
 #endif // _DMF_PARSER_H_
