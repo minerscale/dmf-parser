@@ -21,7 +21,7 @@ pre-build:
 	mkdir -p out/
 	mkdir -p out/src
 
-docs:
+docs: $(HEADERS)
 	$(DOXYGEN) > /dev/null
 
 out/%.o: %.c $(HEADERS) pre-build
