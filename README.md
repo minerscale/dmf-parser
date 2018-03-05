@@ -1,4 +1,4 @@
-# libdmf - A C library for parsing Deflemask (dmf) files
+# libdmf - A C library for parsing Deflemask (dmf) files [![Build Status](https://travis-ci.org/minerscale/dmf-parser.svg?branch=master)](https://travis-ci.org/minerscale/dmf-parser)
 
 ## [Documentation](https://minerscale.github.io/dmf-parser/)
 
