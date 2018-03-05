@@ -75,7 +75,7 @@ typedef struct {
         // Volume Macro:
             unsigned char volume_envelope_size; //!< Size of volume envelope. Ranges from [0 - 127]
             //!
-            //! WILL BE A NULL POINTER IF GAMEBOY! DO NOT DEREFRENCE IF THE SYSTEM IS GAMEBOY!
+            //! WILL BE A NULL POINTER IF GAMEBOY! DO NOT DEREFERENCE IF THE SYSTEM IS GAMEBOY!
             //!
             unsigned int *volume_envelope; //!< Volume envelope data
             signed char volume_loop_position; //!< The loop position of the volume envelope. -1 = NO_LOOP
@@ -209,7 +209,7 @@ typedef struct {
     unsigned char custom_hz_on; //!< Whether or not the dmf has a custom framerate
     unsigned short custom_hz; //!< The actual custom framerate
 
-    int total_rows_per_pattern; //!< The total rows in a pattern (defualt 64)
+    int total_rows_per_pattern; //!< The total rows in a pattern (default 64)
     unsigned char total_rows_in_pattern_matrix; //!< The number of rows in the pattern matrix
     unsigned char **pattern_matrix_value; //!< The pattern matrix data, it runs down and then across
 
@@ -296,7 +296,7 @@ void displayDMF(dmf song);
 
 int verifyDMF(char *filename);
 /*! \fn int verifyDMF(char *filename)
-    \brief Verify a DMF's integrety (or for that matter libdmf's :/)
+    \brief Verify a DMF's integrity (or for that matter libdmf's :/)
     \param filename The path to open, verify and close.
 */
 
