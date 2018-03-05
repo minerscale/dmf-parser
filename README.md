@@ -9,7 +9,7 @@ Documentation is generated using [doxygen](http://www.stack.nl/~dimitri/doxygen/
 1. Make sure you have a C build chain and have installed doxygen
 2. Set CC and AR to your C compiler and archiver (Tested only with gcc & ar and x86_64-x86_64-w64-mingw32-gcc & x86_64-w64-mingw32-ar)
 3. Run make, if the docs aren't up to date they will build too.
-4. If you must not have doxygen, remove all refrences to doxygen. Just remove the docs recipe in the makefile.
+4. If you must not have doxygen, remove all references to doxygen. Just remove the docs recipe in the makefile.
 5. Now that you have libdmf.a, you can get to using it now!
 
 ## Usage
