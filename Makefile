@@ -2,7 +2,7 @@ TARGET = out/libdmf.a
 CC = gcc
 AR = ar
 DOXYGEN = doxygen
-CFLAGS = -Wall -Iinc -O3
+CFLAGS = -Wall -Iinc -O3 -std=c99
 
 .PHONY: default all clean
 
