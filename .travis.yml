@@ -5,4 +5,4 @@ addons:
     packages:
       - doxygen
 
-script: make CC=c99
+script: make
