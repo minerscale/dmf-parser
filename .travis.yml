@@ -1,8 +1,10 @@
 language: c
 
+cache: ccache
+
 addons:
   apt:
     packages:
       - doxygen
 
-script: make CC=c99
+script: make
